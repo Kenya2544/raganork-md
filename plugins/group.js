@@ -97,9 +97,9 @@ Module({
 }, (async (message, match) => {
     if (!message.isGroup) return await message.sendReply(Lang.GROUP_COMMAND)
     var init = match[1] || message.reply_message.jid.split("@")[0]
-    if (!init) return await message.sendReply(Lang.NEED_USER)
+    if (!init) return await message.sendReply(Lang.GIVE_ME_A_USER_TO_ADD)
     var admin = await isAdmin(message);
-    if (!admin) return await message.sendReply(Lang.NOT_ADMIN)
+    if (!admin) return await message.sendReply(Lang.DRIPBOT_⚠️_IS_NOT_ADMIN)
     var initt = init.split(" ").join("")
     var user = initt.replace(/\+/g, '').replace(' ', '').replace(' ', '').replace(' ', '').replace(' ', '').replace(/\(/g, '').replace(/\)/g, '').replace(/-/g, '')
     await message.client.groupAdd(user,message)
@@ -114,9 +114,9 @@ Module({
     if (!user) return await message.sendReply(Lang.NEED_USER)
     if (!message.isGroup) return await message.sendReply(Lang.GROUP_COMMAND)
     var admin = await isAdmin(message);
-    if (!admin) return await message.sendReply(Lang.NOT_ADMIN)
+    if (!admin) return await message.sendReply(Lang.I_CANT_PROMOTE☠️NOT_AN_ADMIN)
     await message.client.sendMessage(message.jid, {
-        text: mentionjid(user) + Lang.PROMOTED,
+        text: mentionjid(user) + Lang.PROMOTED_😊,
         mentions: [user]
     })
     await message.client.groupParticipantsUpdate(message.jid, [user], "promote")
@@ -259,7 +259,7 @@ Module({
     },{detectLinks: true})
 }))
 Module({
-    pattern: 'revoke',
+    pattern: 'RESET LINK',
     fromMe: true,
     use: 'group',
     desc: Lang.REVOKE_DESC
@@ -268,10 +268,10 @@ Module({
     var admin = await isAdmin(message);
     if (!admin) return await message.sendReply(Lang.NOT_ADMIN)
     await message.client.groupRevokeInvite(message.jid)
-    await message.send(Lang.REVOKED)
+    await message.send(Lang.RESETED☠️)
 }))
 Module({
-    pattern: 'glock ?(.*)',
+    pattern: 'RESTRICT ?(.*)',
     fromMe: true,
     use: 'group',
     desc: "Change group settings to allow only admins to edit group's info!"
