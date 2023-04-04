@@ -90,7 +90,7 @@ Module({
     await message.client.groupParticipantsUpdate(message.jid, [user], "remove")
 }))
 Module({
-    pattern: 'add ?(.*)',
+    pattern: 'ADD USERS ?(.*)',
     fromMe: true,
     desc: Lang.ADD_DESC,
     use: 'group'
@@ -105,7 +105,7 @@ Module({
     await message.client.groupAdd(user,message)
 }))
 Module({
-    pattern: 'promote ?(.*)',
+    pattern: 'PROMOTE ?(.*)',
     fromMe: true,
     use: 'group',
     desc: Lang.PROMOTE_DESC
@@ -122,7 +122,7 @@ Module({
     await message.client.groupParticipantsUpdate(message.jid, [user], "promote")
 }))
 Module({
-    pattern: 'leave',
+    pattern: 'LEAVE',
     fromMe: true,
     desc: Lang.LEAVE_DESC
 }, (async (message, match) => {
@@ -245,7 +245,7 @@ Module({
     await message.sendReply(jid)
 }))
 Module({
-    pattern: 'invite',
+    pattern: 'INVITE',
     fromMe: true,
     use: 'group',
     desc: Lang.INVITE_DESC
@@ -281,7 +281,7 @@ Module({
     return await message.client.groupSettingUpdate(message.jid,"locked")
 }))
 Module({
-    pattern: 'gunlock ?(.*)',
+    pattern: 'GUNLOCK ?(.*)',
     fromMe: true,
     use: 'group',
     desc: "Change group settings to allow everyone to edit group's info!"
@@ -291,7 +291,7 @@ Module({
     return await message.client.groupSettingUpdate(message.jid,"unlocked")
 }))
 Module({
-    pattern: 'gname ?(.*)',
+    pattern: 'GNAME ?(.*)',
     fromMe: true,
     use: 'group',
     desc: "Change group subject"
@@ -317,7 +317,7 @@ Module({
     try { return await message.client.groupUpdateDescription(message.jid,(match[1] || message.reply_message?.text).slice(0,512)) } catch { return await message.sendReply("_Failed to change!_")}
 }))
 Module({
-    pattern: 'common ?(.*)',
+    pattern: 'COMMON ?(.*)',
     fromMe: true,
     use: 'group',
     desc: "Get common participants in two groups, and kick using .common kick jid"
@@ -377,7 +377,7 @@ msg += "```"+s.id.split("@")[0]+"``` \n"
 return await message.sendReply(msg)
 }));
 Module({
-    pattern: 'tagall',
+    pattern: 'TAGALL',
     fromMe: true,
     desc: Lang.TAGALL_DESC,
     use: 'group'
@@ -397,7 +397,7 @@ Module({
     })
 }))
 Module({
-    pattern: 'tagadmin',
+    pattern: 'TAGADMIN',
     fromMe: true,
     desc: Lang.TAGALL_DESC,
     dontAddCommandList: true,
@@ -420,7 +420,7 @@ Module({
     })
 }))
 Module({
-    pattern: 'block ?(.*)',
+    pattern: '*BLOCK* ?(.*)',
     fromMe: true,
     use: 'owner'
 }, (async (message, match) => {
@@ -430,7 +430,7 @@ Module({
     await message.client.updateBlockStatus(user, "block");
 }));
 Module({
-    pattern: 'join ?(.*)',
+    pattern: 'JOIN ?(.*)',
     fromMe: true,
     use: 'owner'
 }, (async (message, match) => {
@@ -439,7 +439,7 @@ Module({
     await message.client.groupAcceptInvite(match[1].split("/")[3])
 }));
 Module({
-    pattern: 'unblock ?(.*)',
+    pattern: 'UNBLOCK ?(.*)',
     fromMe: true,
     use: 'owner'
 }, (async (message) => {
