@@ -1,5 +1,5 @@
-# _Raganork-multi-device_
-## _Multi device whatsapp bot created with [@adiwajshing/baileys](https://github.com/adiwajshing/Baileys)_
+# _DRIPBOT💙-multi-device_
+## _Multi device whatsapp bot created with [@Kenya2544/baileys](https://github.com/Kenya2544/Baileys)_
   
 <div align="center">
    
@@ -17,9 +17,9 @@
 <div>
   <br>
 
-## _[Koyeb: How to deploy](https://github.com/souravkl11/raganork-md/wiki/Deploying-with-Koyeb)_
+[SUPPORT WHATSAPP GROUP](https://chat.whatsapp.com/KDL1QGmR5kNLOJeuyqS9Or)
 
-## _[Basic usage helper](https://github.com/souravkl11/raganork-md/wiki/Raganork-Documentation)_
+
 
 <div align="left">
 
@@ -29,6 +29,9 @@ I can't guarantee or can be held responsible if you get blocked or banned by usi
 
 # Legal
 
--   This code is in no way affiliated, authorized, maintained, sponsored or endorsed by WA (WhatsApp) or any of its affiliates or subsidiaries.
--   The official WhatsApp website can be found at https://whatsapp.com. "WhatsApp" as well as related names, marks, emblems and images are registered trademarks of their respective owners.
--   This is an independent and unofficial software Use at your own risk.
+-   This code got copyrights 
+-   inform me before using it to avoid consequences
+-    Never try to sell this script 
+-     DRIPBOT new 2023 bot
+
+
